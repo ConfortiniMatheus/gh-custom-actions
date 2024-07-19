@@ -1,0 +1,7 @@
+name: 'Deploy to AWS S3'
+description: 'Deploy a static website via AWS S3'
+runs:
+  using: 'node16'
+  # pre: execute a script prior the javascript file?
+  main: 'main.js'
+  # post: execute a script after the javascript file?

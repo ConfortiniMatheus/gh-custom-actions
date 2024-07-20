@@ -10,10 +10,13 @@ function run(){
 
     // 2) Upload files
     const s3Uri = `s3://${bucket}`;
-    
-    exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${region}`);
 
-    core.notice('Hello from my custom Javascript action');
+    // exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${region}`);
+
+    const websiteUrl = `http://${bucket}.s3-website-${region}.amazonaws.com`;
+    core.setOutput('website-url'); // ::set-output
+
+    // core.notice('Hello from my custom Javascript action');
 }
 
 run();

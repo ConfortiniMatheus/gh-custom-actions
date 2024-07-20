@@ -86,7 +86,7 @@ jobs:
       #     dist-folder: ./dist
       #     # bucket-region: 
       - name: Get AWS permissions
-        uses: aws-actions/configure-aws-credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::450226343468:role/GitHubDemo1
           aws-region: us-east-1
